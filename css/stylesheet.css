@@ -1,0 +1,387 @@
+*{
+  margin:0;
+  padding:0;
+
+  /* background-color: rgba(255,50,50,0.4); */
+}
+body{
+  font-family: 'Work Sans', sans-serif;
+
+  width:100%;
+  /* height:100%; */
+  background-color: #1E1E1E;
+  overflow-x: hidden;
+}
+
+.hide{
+  display:none;
+}
+/*---------------------------NAV---------*/
+nav{
+  width:100%;
+  height:120px;
+  position: fixed;
+  top:0;
+  z-index: 10;
+  background-color: #1E1E1E;
+}
+
+ul{
+  width:100%;
+  height:120px;
+  display: flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+.anim_opacity{
+  animation: animOpacity 0.5s ease-in-out 0s;
+  animation-fill-mode: forwards;
+}
+
+
+li{
+  display: flex;
+  flex-direction:column;
+
+  list-style-type: none;
+  padding-right: 130px;
+}
+li a{
+  font-size: 18px;
+  font-weight: normal;
+  color:white;
+  opacity:0.6;
+  text-decoration: none;
+
+}
+li div{
+  width:50px;
+  height:4px;
+}
+
+li div.active{
+  background-color: #2D8BC0;
+
+}
+.active{
+  color:#2D8BC0;
+}
+
+#logo_min{
+  position:fixed;
+z-index:20;
+  top:20px;
+  left:130px;
+  /* width:10%; */
+  width:160px;
+}
+
+/*---------------------------Background(logo)-----------*/
+.anim_move{
+  animation: animMovebg 1s ease-in-out 0s;
+  animation-fill-mode: forwards;
+  z-index: -5;
+}
+#bg_logo{
+  position:fixed;
+  right:-80vw;
+  bottom:-50vh;
+
+  filter: saturate(0%);
+  opacity:0.1;
+  width:80%;
+  display: block;
+  z-index: -5;
+}
+
+
+
+/*------------------------------Home-----------------------*/
+.startInfo{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:20%;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.startInfo div{
+  color: rgba(255,255,255,0.7);
+  font-size: 22px;
+}
+.startInfo img{
+  position:absolute;
+  left:168px;
+animation: logo_anim_arrow 1s ease-in 0s;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+}
+.hide_opacity{
+  animation: animOpacity 0.5s ease-in-out 0s;
+  animation-direction:reverse;
+  animation-fill-mode: forwards;
+}
+#logo_center{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.center{
+  width:20%;
+}
+#start{
+  width:20%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:20;
+}
+
+#logo{
+  position:absolute;
+  z-index: 30;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+  width:20%;
+
+  /* animation: logoReal_anim2 1s ease-in 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite; */
+
+}
+
+
+#logo:hover{
+  animation: logo_animHover 0.3s ease-out 0s;
+  animation-fill-mode: forwards;
+
+}
+
+.animTransition{
+  width:100%;
+
+  transform:  translate(-50%,-50%);
+  top:50%;
+  left:50%;
+
+  opacity:0.2;
+  transform:scale(1.5);
+  z-index:5;
+
+  animation: animTransition 0.5s ease-in 0s;
+  animation-fill-mode: forwards;
+
+}
+.animTransition2{
+  position:absolute;
+
+  width:20%;
+
+  animation: animTransition2 1s ease-in-out 0s;
+  animation-fill-mode: forwards;
+
+}
+#logo_opacity{
+  width:100%;
+
+  opacity:0.2;
+  transform:scale(1.5);
+  z-index:5;
+
+  animation: logo_anim 1s ease-in 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+
+/*-------------------------Contenu------------------*/
+#container{
+  margin-top:100vh;
+  width:100vw;
+}
+.anim_container{
+  animation: animMoveContainer 1s ease-in-out 1s;
+  animation-fill-mode: forwards;}
+
+article a{
+  height:200px;
+  margin-left: 130px;
+  margin-right: 130px;
+  margin-bottom: 80px;
+
+  display:flex;
+  align-items: center;
+  text-decoration: none;
+
+}
+
+article:nth-last-child(odd) a{
+  justify-content:flex-start;
+  flex-direction: row-reverse;
+
+  /* background-color: blue; */
+
+}
+article:nth-last-child(even) a {
+  justify-content:flex-start;
+  /* background-color: green; */
+}
+
+
+article a div{
+  display:flex;
+  flex-direction: column;
+}
+article:nth-last-child(odd) a div{
+align-items: flex-end;
+}
+
+article a div div{
+  width:60%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height:5px;
+  background-color: #2D8BC0;
+}
+article a img{
+  height:100%;
+}
+article a h2{
+  color: #EEEEEE;
+  font-size:25px;
+
+}
+article a span{
+  color: #EEEEEE;
+  opacity:0.6;
+  font-size:20px;
+
+}
+
+/*----------Footer-------------*/
+footer{
+  position: fixed;
+  bottom:0;
+  height:20px;
+  width:100%;
+  background-color: black;
+  text-align: center;
+  color:white;
+
+}
+footer a{
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+
+/*-------------------------------Animations--------------*/
+@keyframes animMovebg{
+  from {
+display: block;
+right:-80%;
+opacity:0;
+}
+100% {
+  display: none;
+  right:-50%;
+
+  opacity:0.05;
+}
+}
+
+@keyframes animMoveContainer{
+  from {
+display: block;
+margin-top:100vh;
+}
+100% {
+  display: block;
+margin-top:260px;
+}
+}
+@keyframes animOpacity{
+  from {
+display: block;
+opacity:0;
+}
+100% {
+  display: block;
+
+  opacity:1;
+}
+}
+
+@keyframes animTransition2{
+  from {
+transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+  width:26%;
+}
+  100% {
+    transform: translate(0%,0%);
+    top:20px;
+    left:130px;
+    /* width:10%; */
+    width:160px;
+    position:fixed;
+
+}
+}
+@keyframes animTransition{
+  from {
+transform: scale(1);
+opacity:0.2;
+display:block;
+ }
+
+  100% {
+    transform: scale(10);
+  opacity:0;
+  display:none;
+  pointer-events: none;
+  }
+
+}
+@keyframes logo_animHover{
+  from {
+transform: translate(-50%,-50%);
+width:20%; }
+
+  100% {
+    transform: translate(-50%,-50%);
+  width:24%; }
+}
+@keyframes logo_anim_arrow {
+  from {
+padding-left: 50px;
+transform:scale(1) }
+
+  100% {padding-left: 20px;
+  transform:scale(0.8)}
+
+}
+@keyframes logo_anim{
+  from {
+    transform:scale(1.4);
+  }
+
+  100% {
+    transform: scale(1.2);
+
+  }
+}
